@@ -19,7 +19,7 @@
       </div>
       <div class="cabecalho-lateral cabecalho-lateral-perfil">
         <img class="cabecalho-nome-foto" src="img/foto.png" alt="Foto de perfil">
-        <p class="cabecalho-nome-perfil">Harry</p>
+        <p>Harry</p>
       </div>
     </header>
 
@@ -39,7 +39,11 @@
       </nav>
       <div class="conteudo">
         <div class="conteudo-codigo">
-          
+          <div class="botoes-falsos">
+            <div class="circulo vermelho"></div>
+            <div class="circulo amarelo"></div>
+            <div class="circulo verde"></div>
+          </div>
           <textarea class="codigo" name="codigo" id="codigo">
 
           </textarea>
@@ -47,7 +51,33 @@
         <button class="conteudo-botao">Visualizar com o highlight</button>
       </div>
       <div class="configs">
+        <div class="configs-area">
+          <p class="menu-lateral-titulo">
+            SEU PROJETO
+          </p>
+          <input type="text" name="nome-projeto" id="nome-projeto" placeholder="Nome do seu projeto">
+          <textarea name="descricao-projeto" id="descricao-projeto" placeholder="Descrição do seu projeto"></textarea>
+        </div>
+        <div class="configs-area">
+          <p class="menu-lateral-titulo">
+            PERSONALIZAÇÃO
+          </p>
+          <select name="linguagem" id="linguagem">
+            <option value="javascript">Javascript</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+          </select>
+          <div class="configs-cores-borda">
+            <div class="configs-cores">
 
+            </div>
+          </div>
+        </div>
+        <div class="configs-area">
+          <button class="btn-salvar">
+            Salvar projeto
+          </button>
+        </div>
       </div>
     </section>
 

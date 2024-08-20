@@ -4,7 +4,9 @@
 :root {
     --cor-fundo: #051D3B;
     --branco: #FFFFFF;
+    --azul-claro: #6BD1FF;
     --cinza-escuro: #141414;
+    --roxo: #5081FB;
     --fonte-inter: "Inter", sans-serif;
     --font-roboto: "Roboto Mono", monospace;
 }
@@ -14,12 +16,13 @@ body {
     background-color: var(--cor-fundo);
     color: var(--branco);
     font-family: var(--fonte-inter);
+    font-weight: 400;
 }
 .cabecalho {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem 0.5rem;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 1rem 1.5rem;
 }
 .cabecalho-lateral {
     width: 20%;
@@ -53,19 +56,15 @@ body {
     gap: 0.75rem;
     align-items: center;
     justify-content: right;
-    padding-right: 1.5rem;
 }
 .cabecalho-nome-foto {
     width: 2rem;
     height: 2rem;
 }
-.cabecalho-nome-perfil {
-    font-weight: 400;
-}
 .corpo {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     display: flex;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 .menu-lateral {
     width: 20%;
@@ -75,7 +74,7 @@ body {
 }
 .menu-lateral-titulo {
     letter-spacing: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
 }
 .menu-lateral ul {
     display: flex;
@@ -99,10 +98,34 @@ body {
 .conteudo-codigo {
     position: relative;
     box-sizing: border-box;
-    background-color: #6BD1FF;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azul-claro);
     border-radius: 0.5rem;
     width: 100%;
     height: 50vh;
+}
+.botoes-falsos {
+    position: absolute;
+    display: flex;
+    gap: 0.5rem;
+    top: 3rem;
+    left: 3rem;
+    z-index: 1;
+}
+.circulo {
+    width: 0.875rem;
+    height: 0.875rem;
+    border-radius: 50%;
+}
+.vermelho {
+    background-color: #FF5F56;
+}
+.amarelo {
+    background-color: #FFBD2E;
+}
+.verde {
+    background-color: #27C93F;
 }
 .codigo {
     position: absolute;
@@ -110,15 +133,13 @@ body {
     left: 2rem;
     right: 2rem;
     bottom: 2rem;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-radius: 0.5rem;
     background-color: var(--cinza-escuro);
     resize: none;
     color: var(--branco);
     font-family: var(--font-roboto);
-    font-weight: 400;
     font-size: 0.875rem;
-    padding: 1rem;
+    padding: 3.5rem 1rem 1rem 1rem;
     overflow: hidden;
 }
 .conteudo-botao {
@@ -130,4 +151,52 @@ body {
 }
 .configs {
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.configs-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.configs-area input,
+.configs-area textarea,
+.configs-area select {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+    border: transparent;
+    background-color: rgb(255, 255, 255, 0.16);
+    font-family: var(--fonte-inter);
+    color: var(--branco);
+    
+    &::placeholder {
+        color: var(--branco);
+        opacity: 64%;
+    }
+}
+.configs-area textarea {
+    resize: none;
+}
+select option {
+    color: var(--cinza-escuro);
+}
+.configs-cores-borda {
+    border: 1px solid var(--branco);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.configs-cores {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--azul-claro);
+    border-radius: 0.5rem;
+}
+.btn-salvar {
+    background-color: var(--roxo);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
 }
